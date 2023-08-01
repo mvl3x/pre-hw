@@ -1,17 +1,20 @@
 type AddressType = {
-  street: any; // ПОДПРАВЛЯЕМ any
-  city: any; // ПОДПРАВЛЯЕМ any
+  street: string;
+  city: string;
 };
 
 type UserType = {
-  // ПРИДЕТСЯ САМОМУ)
+  id: number;
+  name: string;
+  age: number;
+  address: AddressType;
 };
 
 type UserListPropsType = {
-  users: UserType; // ПО МОЕМУ ЧЕГО-ТО НЕ ХВАТАЕТ...
+  users: UserType[];
 };
 
-export const UserList = (props: 'ВСТАВЛЯЕМ ТИПИЗАЦИЮ') => {
+export const UserList = (props: UserListPropsType) => {
   return (
     <div id={'hw01-users'}>
       <h2>User List:</h2>
