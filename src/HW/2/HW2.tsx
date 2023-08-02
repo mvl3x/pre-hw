@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { UserList2 } from './UserList2';
+import { useState } from "react";
+import { UserList2 } from "./UserList2";
 
 export type AddressType = {
   street: string;
@@ -10,11 +10,11 @@ export type UserType = {
   id: number;
   name: string;
   age: number;
-  address: any; // пропиши типизацию
+  address: AddressType;
 };
 
 export type UsersObjectType = {
-  myFriends: any; // пропиши типизацию
+  myFriends: UserType[];
 };
 
 export const HW2 = () => {
