@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { ChangeEvent, useState } from "react";
 
 export const HW3 = () => {
   // 1️⃣ Раскомментируйте JSX(HW3.tsx) и вы увидите,
@@ -9,14 +9,13 @@ export const HW3 = () => {
   // - дописать функциональность (где указано комментариями)
   // - приложение должно компилироваться и запускаться в браузере
 
-
-  const [currentText, setCurrentText] = useState('');
+  const [currentText, setCurrentText] = useState("");
   const [texts, setTexts] = useState<string[]>([
-    'То, что вы делаете по ночам, то и делает вас богатым. (Аль Капоне)',
+    "То, что вы делаете по ночам, то и делает вас богатым. (Аль Капоне)",
   ]);
 
-  const handleChange = (event: 'НУЖНО ПРОТИПИЗИРОВАТЬ') => {
-    // setCurrentText(ЧЕГО-ТО НЕ ХВАТАЕТ);
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setCurrentText(event.currentTarget.value);
   };
 
   const handleSave = () => {
